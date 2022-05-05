@@ -36,9 +36,9 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 
 ### Modelo/Controler
-##### Lista de palabras para generar aleatoriamente
-##### Funciones gestion intentos
-##### General palabra
+##### - Lista de palabras para generar aleatoriamente
+##### -- Funciones gestion intentos
+##### -- Generar palabra
 ##### Modificar número de vidas
 ##### Comprobar coincidencia palabra
 ##### Restar pistas
