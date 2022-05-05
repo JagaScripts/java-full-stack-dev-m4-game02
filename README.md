@@ -14,7 +14,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Menú Acerca de
 ##### - Grupo pistas botones rojos
 ##### - Grupo palabra secreta labels "_"
-##### - Grupo Letras teclado
+##### - ~~Grupo Letras teclado~~
 ##### - ~~Lista de imagenes ahorcado~~
 ##### - ListBox con 10 palabras
 ##### - Label de intentos fallidos
@@ -50,4 +50,4 @@ Joan Hurtado -->
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Grupo Letras teclado
+Jose A González Alcántara --> 
