@@ -7,9 +7,9 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 ## Lista de featrues a realizar
 
-###Vista
-####Crear vista diseñador
-#####Componente secuencia de imagenes
+### Vista
+#### Crear vista diseñador
+##### Componente secuencia de imagenes
 --- Submenús Salir, Nuevo Juego dentro Menú Juego
 --- Menú Acerca de
 --- Grupo pistas botones rojos
