@@ -50,4 +50,4 @@ Joan Hurtado --> Submenús Salir, Nuevo Juego dentro Menú Juego
 
 Daniel Fernandez --> Lista de palabras para generar aleatoriamente, Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> 
+Jose A González Alcántara --> Hacer el primer pull request
