@@ -10,7 +10,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ### Vista
 #### Crear vista diseñador
 ##### - Componente secuencia de imagenes
-##### - Submenús Salir, Nuevo Juego dentro Menú Juego
+##### - ~~Submenús Salir, Nuevo Juego dentro Menú Juego~~
 ##### - Menú Acerca de
 ##### - Grupo pistas botones rojos
 ##### - Grupo palabra secreta labels "_"
@@ -36,7 +36,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 
 ### Modelo/Controler
-##### - Lista de palabras para generar aleatoriamente
+##### - ~~Lista de palabras para generar aleatoriamente~~
 ##### - Funciones gestion intentos
 ##### - Generar palabra
 ##### - Modificar número de vidas
@@ -46,8 +46,8 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Volver a empezar
 
 
-Joan Hurtado --> Submenús Salir, Nuevo Juego dentro Menú Juego
+Joan Hurtado --> Lista de imagenes ahorcado
 
-Daniel Fernandez --> Lista de palabras para generar aleatoriamente, Funciones gestion intentos, Generar palabra
+Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Hacer el primer pull request
+Jose A González Alcántara --> Grupo Letras teclado
