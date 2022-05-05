@@ -58,9 +58,10 @@ public class AhorcadoAPP extends JFrame {
 		panel.setBounds(250, 11, 174, 206);
 		contentPane.add(panel);
 		
+		//Numero para que vaya cambiando de imagen en la ruta
 		int numero = 0;
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);		//Ruta de las imagenes más variable para ir cambiando
 		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+numero+".jpg")));
 		panel.add(lblNewLabel);
 		
