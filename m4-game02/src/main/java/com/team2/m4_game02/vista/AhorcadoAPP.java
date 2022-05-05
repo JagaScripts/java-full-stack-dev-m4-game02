@@ -11,6 +11,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JButton;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -51,6 +53,16 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(250, 11, 174, 206);
+		contentPane.add(panel);
+		
+		int numero = 0;
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+numero+".jpg")));
+		panel.add(lblNewLabel);
 		
 		
 		
