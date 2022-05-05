@@ -46,6 +46,6 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Volver a empezar
 
 
-Joan Hurtado 
+Joan Hurtado --> Submenús Salir, Nuevo Juego dentro Menú Juego
 
 Daniel Fernandez --> Lista de palabras para generar aleatoriamente, Funciones gestion intentos, Generar palabra
