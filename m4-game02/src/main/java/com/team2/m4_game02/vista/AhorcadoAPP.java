@@ -39,7 +39,7 @@ public class AhorcadoAPP extends JFrame {
 	 */
 	public AhorcadoAPP() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 597, 614);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -110,9 +110,117 @@ public class AhorcadoAPP extends JFrame {
 		
 		
 		
+		
+		
 		/*Jose */
 		
+		JButton btnY = new JButton("Y");
+		btnY.setBounds(10, 492, 50, 50);
+		contentPane.add(btnY);
 		
+		JButton btnZ = new JButton("Z");
+		btnZ.setBounds(60, 492, 50, 50);
+		contentPane.add(btnZ);
+		
+		JButton btnT = new JButton("T");
+		btnT.setBounds(10, 442, 50, 50);
+		contentPane.add(btnT);
+		
+		JButton btnU = new JButton("U");
+		btnU.setBounds(60, 442, 50, 50);
+		contentPane.add(btnU);
+		
+		JButton btnO = new JButton("O");
+		btnO.setBounds(10, 392, 50, 50);
+		contentPane.add(btnO);
+		
+		JButton btnP = new JButton("P");
+		btnP.setBounds(60, 392, 50, 50);
+		contentPane.add(btnP);
+		
+		JButton btnQ = new JButton("Q");
+		btnQ.setBounds(110, 392, 50, 50);
+		contentPane.add(btnQ);
+		
+		JButton btnV = new JButton("V");
+		btnV.setBounds(110, 442, 50, 50);
+		contentPane.add(btnV);
+		
+		JButton btnR = new JButton("R");
+		btnR.setBounds(160, 392, 50, 50);
+		contentPane.add(btnR);
+		
+		JButton btnW = new JButton("W");
+		btnW.setBounds(160, 442, 50, 50);
+		contentPane.add(btnW);
+		
+		JButton btnX = new JButton("X");
+		btnX.setBounds(210, 442, 50, 50);
+		contentPane.add(btnX);
+		
+		JButton btnS = new JButton("S");
+		btnS.setBounds(210, 392, 50, 50);
+		contentPane.add(btnS);
+		
+		JButton btnK = new JButton("K");
+		btnK.setBounds(10, 342, 50, 50);
+		contentPane.add(btnK);
+		
+		JButton btnL = new JButton("L");
+		btnL.setBounds(60, 342, 50, 50);
+		contentPane.add(btnL);
+		
+		JButton btnF = new JButton("F");
+		btnF.setBounds(10, 292, 50, 50);
+		contentPane.add(btnF);
+		
+		JButton btnA = new JButton("A");
+		btnA.setBounds(10, 242, 50, 50);
+		contentPane.add(btnA);
+		
+		JButton btnM = new JButton("M");
+		btnM.setBounds(110, 342, 50, 50);
+		contentPane.add(btnM);
+		
+		JButton btnN = new JButton("N");
+		btnN.setBounds(160, 342, 50, 50);
+		contentPane.add(btnN);
+		
+		JButton btnNY = new JButton("Ñ");
+		btnNY.setBounds(210, 342, 50, 50);
+		contentPane.add(btnNY);
+		
+		JButton btnG = new JButton("G");
+		btnG.setBounds(60, 292, 50, 50);
+		contentPane.add(btnG);
+		
+		JButton btnH = new JButton("H");
+		btnH.setBounds(110, 292, 50, 50);
+		contentPane.add(btnH);
+		
+		JButton btnI = new JButton("I");
+		btnI.setBounds(160, 292, 50, 50);
+		contentPane.add(btnI);
+		
+		JButton btnJ = new JButton("J");
+		btnJ.setBounds(210, 292, 50, 50);
+		contentPane.add(btnJ);
+		
+		JButton btnB = new JButton("B");
+		btnB.setBounds(60, 242, 50, 50);
+		contentPane.add(btnB);
+		
+		JButton btnC = new JButton("C");
+		btnC.setBounds(110, 242, 50, 50);
+		contentPane.add(btnC);
+		
+		JButton btnD = new JButton("D");
+		btnD.setBounds(160, 242, 50, 50);
+		contentPane.add(btnD);
+		
+		JButton btnE = new JButton("E");
+		btnE.setBounds(210, 242, 50, 50);
+		contentPane.add(btnE);
 		
 		
 		
