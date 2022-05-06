@@ -1,4 +1,4 @@
-package controler;
+package com.team2.m4_game02.controler;
 
 import java.util.Random;
 
