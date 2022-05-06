@@ -1,4 +1,4 @@
-package PalabrasAleatorias;
+package controler;
 
 import java.util.Random;
 
