@@ -17,7 +17,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - ~~Grupo Letras teclado~~
 ##### - ~~Lista de imagenes ahorcado~~
 ##### - ListBox con 10 palabras
-##### - Label de intentos fallidos
+##### - ~~Label de intentos fallidos~~
 #### Crear funcionalidad componentes
 ##### - Componente secuencia de imagenes
 ##### - Submenús Salir, Nuevo Juego dentro Menú Juego
@@ -46,7 +46,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Volver a empezar
 
 
-Joan Hurtado -->
+Joan Hurtado --> ListBox con 10 palabras
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
