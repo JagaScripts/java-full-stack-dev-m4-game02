@@ -26,4 +26,48 @@ public class Partida {
 		this.intentos--;
 	}
 
+	/**
+	 * @return the palabraObjeto
+	 */
+	public PalabrasAleatioras getPalabraObjeto() {
+		return palabraObjeto;
+	}
+
+	/**
+	 * @param palabraObjeto the palabraObjeto to set
+	 */
+	public void setPalabraObjeto(PalabrasAleatioras palabraObjeto) {
+		this.palabraObjeto = palabraObjeto;
+	}
+
+	/**
+	 * @return the palabra
+	 */
+	public String getPalabra() {
+		return palabra;
+	}
+
+	/**
+	 * @param palabra the palabra to set
+	 */
+	public void setPalabra(String palabra) {
+		this.palabra = palabra;
+	}
+
+	/**
+	 * @return the intentos
+	 */
+	public int getIntentos() {
+		return intentos;
+	}
+
+	/**
+	 * @param intentos the intentos to set
+	 */
+	public void setIntentos(int intentos) {
+		this.intentos = intentos;
+	}
+	
+	
+
 }

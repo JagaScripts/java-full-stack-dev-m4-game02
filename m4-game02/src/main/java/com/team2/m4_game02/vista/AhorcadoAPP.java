@@ -25,6 +25,9 @@ import java.awt.event.ActionEvent;
 public class AhorcadoAPP extends JFrame {
 
 	private JPanel contentPane;
+	Partida partida = new Partida();
+	String palabra = partida.getPalabra();
+	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
 
 	/**
 	 * Launch the application.
@@ -46,6 +49,7 @@ public class AhorcadoAPP extends JFrame {
 	 * Create the frame.
 	 */
 	public AhorcadoAPP() {
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 597, 614);
@@ -290,22 +294,49 @@ public class AhorcadoAPP extends JFrame {
 		btnPista3.setBounds(160, 21, 50, 50);
 		contentPane.add(btnPista3);
 
-			
+		cargarLetras();
 		
-
-		ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
-		String palabra = new String("Ahorcado");
-		int xLetra = 10;
-		for (int i = 0; i < palabra.length(); i++) {
-			
-			listaEtiquetasLetras.add(new EtiquetaLetra(xLetra, 180));
-			xLetra += 50;
-			contentPane.add(listaEtiquetasLetras.get(i));
-		}
+		
 		
 			/*EtiquetaLetra etiquetaLetra = (EtiquetaLetra) iteratorLetras.next();
 			contentPane.add(etiquetaLetra);*/
 
+	}
+	
+	private void cargarLetras() {
+		
+		int xLetra = 10;
+		for (int i = 0; i < this.palabra.length(); i++) {
+
+			listaEtiquetasLetras.add(new EtiquetaLetra(xLetra, 180));
+			xLetra += 50;
+			contentPane.add(listaEtiquetasLetras.get(i));
+		}
+
+	}
+	
+	private void bambiarLetra(char letra) {
+
+		for (int i = 0; i < palabra.length(); i++) {
+
+			if (palabra.charAt(i) == letra) {
+				
+				listaEtiquetasLetras.get(i).setText(String.valueOf(letra));
+				
+			}
+			
+		}
+
+	}
+	
+	private void resetLetras() {
+		
+		for (int i = 0; i < palabra.length(); i++) {
+			
+			listaEtiquetasLetras.get(i).setText("_");
+			
+		}
+		
 	}
 	
 	private String acercaDe() {
