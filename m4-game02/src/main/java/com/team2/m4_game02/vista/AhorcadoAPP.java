@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import PalabrasAleatorias.EtiquetaLetra;
+
 import com.team2.m4_game02.controler.Partida;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
