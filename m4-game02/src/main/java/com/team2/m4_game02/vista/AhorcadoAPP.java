@@ -26,7 +26,7 @@ public class AhorcadoAPP extends JFrame {
 
 	private JPanel contentPane;
 	Partida partida = new Partida();
-	String palabra = partida.getPalabra();
+	String palabra = partida.getPalabra().toUpperCase();
 	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
 
 	/**
@@ -74,7 +74,7 @@ public class AhorcadoAPP extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		panel.add(lblNewLabel);
 		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);		//Ruta de las imagenes más variable para ir cambiando
-		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+numero+".jpg")));
+		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+partida.getIntentos()+".jpg")));
 		
 		
 		
@@ -82,11 +82,10 @@ public class AhorcadoAPP extends JFrame {
 		lblNewLabel_1.setBounds(422, 14, 95, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		int intentosFallidos = 0;
-		JLabel lblNewLabel_2 = new JLabel(intentosFallidos + "");
-		lblNewLabel_2.setForeground(Color.RED);
-		lblNewLabel_2.setBounds(525, 14, 46, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblIntentos = new JLabel(partida.getIntentos() + "");
+		lblIntentos.setForeground(Color.RED);
+		lblIntentos.setBounds(525, 14, 46, 14);
+		contentPane.add(lblIntentos);
 		
 		//Metodo para sumar intentos fallidos
 		
@@ -222,6 +221,23 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.add(btnF);
 		
 		JButton btnA = new JButton("A");
+		btnA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if (partida.comprobarletras(btnA.getText().charAt(0))) {
+					
+					cambiarLetra(btnA.getText().charAt(0));
+					
+				}else {
+					
+					partida.sumarIntentos();
+					lblIntentos.setText(String.valueOf(partida.getIntentos()));
+					
+				}
+				btnA.setEnabled(false);
+			
+			}
+		});
 		btnA.setBounds(10, 242, 50, 50);
 		contentPane.add(btnA);
 		
@@ -312,11 +328,13 @@ public class AhorcadoAPP extends JFrame {
 			xLetra += 50;
 			contentPane.add(listaEtiquetasLetras.get(i));
 		}
+		System.out.println(palabra);
 
 	}
 	
-	private void bambiarLetra(char letra) {
+	private void cambiarLetra(char letra) {
 
+		System.out.println(letra);
 		for (int i = 0; i < palabra.length(); i++) {
 
 			if (palabra.charAt(i) == letra) {
