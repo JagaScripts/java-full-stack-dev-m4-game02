@@ -50,4 +50,4 @@ Joan Hurtado -->
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> 
+Jose A González Alcántara --> Menú Acerca de
