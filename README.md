@@ -9,9 +9,9 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 ### Vista
 #### Crear vista diseñador
-##### - Componente secuencia de imagenes
+##### - ~~Componente secuencia de imagenes~~
 ##### - ~~Submenús Salir, Nuevo Juego dentro Menú Juego~~
-##### - Menú Acerca de
+##### - ~~Menú Acerca de~~
 ##### - Grupo pistas botones rojos
 ##### - Grupo palabra secreta labels "_"
 ##### - ~~Grupo Letras teclado~~
@@ -50,4 +50,4 @@ Joan Hurtado -->
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Menú Acerca de
+Jose A González Alcántara --> Grupo pistas botones rojos
