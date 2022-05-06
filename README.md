@@ -46,7 +46,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Volver a empezar
 
 
-Joan Hurtado --> 
+Joan Hurtado --> Acerca De Vista
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
