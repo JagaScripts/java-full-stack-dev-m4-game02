@@ -50,4 +50,4 @@ Joan Hurtado -->
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Grupo palabra secreta labels "_"
+Jose A González Alcántara --> Organizar ramas y git
