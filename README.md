@@ -51,4 +51,4 @@ Joan Hurtado -->  Partida
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Crear funcionalidad componentes - Grupo palabra secreta labels "_"
+Jose A González Alcántara --> Descanso
