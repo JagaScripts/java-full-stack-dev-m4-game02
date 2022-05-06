@@ -14,6 +14,7 @@ import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import javax.swing.JComboBox;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -78,7 +79,11 @@ public class AhorcadoAPP extends JFrame {
 		
 		//Metodo para sumar intentos fallidos
 				
-		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setToolTipText("");
+		comboBox.setBounds(328, 506, 145, 22);
+		contentPane.add(comboBox);
+		comboBox.setVisible(false);
 		
 		
 		
@@ -242,6 +247,8 @@ public class AhorcadoAPP extends JFrame {
 		JButton btnE = new JButton("E");
 		btnE.setBounds(210, 242, 50, 50);
 		contentPane.add(btnE);
+		
+	
 		
 		
 		
