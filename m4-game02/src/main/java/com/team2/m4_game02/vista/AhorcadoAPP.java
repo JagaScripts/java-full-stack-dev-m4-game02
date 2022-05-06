@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -78,13 +79,17 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		//Metodo para sumar intentos fallidos
-				
+		
+		
+		//ComboBox con las palabrass
 		JComboBox comboBox = new JComboBox();
-		comboBox.setToolTipText("");
 		comboBox.setBounds(328, 506, 145, 22);
+		comboBox.addItem("perro");
+		comboBox.addItem("gato");
 		contentPane.add(comboBox);
 		comboBox.setVisible(false);
 		
+		//Metodo para añadir palabras
 		
 		
 		
@@ -248,13 +253,32 @@ public class AhorcadoAPP extends JFrame {
 		btnE.setBounds(210, 242, 50, 50);
 		contentPane.add(btnE);
 		
-	
+
+		JButton btnPista = new JButton("");
+		btnPista.setBackground(Color.RED);
+		btnPista.setForeground(Color.BLACK);
+		btnPista.setBounds(10, 21, 50, 50);
+		contentPane.add(btnPista);
 		
+		JButton btnPista1 = new JButton("");
+		btnPista1.setBackground(Color.RED);
+		btnPista1.setForeground(Color.BLACK);
+		btnPista1.setBounds(60, 21, 50, 50);
+		contentPane.add(btnPista1);
 		
+		JButton btnPista2 = new JButton("");
+		btnPista2.setBackground(Color.RED);
+		btnPista2.setForeground(Color.BLACK);
+		btnPista2.setBounds(110, 21, 50, 50);
+		contentPane.add(btnPista2);
 		
-		
-		
-		
+		JButton btnPista3 = new JButton("");
+		btnPista3.setBackground(Color.RED);
+		btnPista3.setForeground(Color.BLACK);
+		btnPista3.setBounds(160, 21, 50, 50);
+		contentPane.add(btnPista3);
+
+			
 		
 	}
 }
