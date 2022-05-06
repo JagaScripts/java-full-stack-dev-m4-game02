@@ -8,13 +8,9 @@ public class Partida {
 
 	public Partida() {
 		this.palabraObjeto = new PalabrasAleatioras();
-<<<<<<< HEAD
+
 		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
-		this.intentos = 7;
-=======
-		this.palabra = palabraObjeto.GenerarPalabra();
 		this.intentosFallidos = 0;
->>>>>>> fbaa2a2f3a629e1d8bf0507a9ba582363642f22a
 	}
 
 	private boolean intentosDisponibles() {
@@ -27,13 +23,9 @@ public class Partida {
 		}
 	}
 
-<<<<<<< HEAD
-	public void restarIntentos() { //Si comprobarLetras es false se resta un intento
-		this.intentos--;
-=======
-	private void sumarIntentos() { //Si comprobarLetras es false se resta un intento
+	public void sumarIntentos() { //Si comprobarLetras es false se resta un intento
 		this.intentosFallidos++;
->>>>>>> fbaa2a2f3a629e1d8bf0507a9ba582363642f22a
+
 	}
 
 
@@ -93,18 +85,6 @@ public class Partida {
 		return false;
 	}
 	
-<<<<<<< HEAD
-	public int numeroIntentosFallidos() {
-		
-		int num = 7;//Se empieza con el numero de intentos
-		
-		num = num - this.intentos; // 7 - 7 = 0, primera imagen es 0, intentos-- --> 7-6 = 1, segunda imagen
-		
-		return num;
-	}
 
-	
-=======
->>>>>>> fbaa2a2f3a629e1d8bf0507a9ba582363642f22a
 
 }

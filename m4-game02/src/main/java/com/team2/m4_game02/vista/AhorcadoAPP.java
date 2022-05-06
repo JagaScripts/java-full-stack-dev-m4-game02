@@ -230,8 +230,8 @@ public class AhorcadoAPP extends JFrame {
 					
 				}else {
 					
-					//partida.s;
-					lblIntentos.setText(String.valueOf(partida.numeroIntentosFallidos()));
+					partida.sumarIntentos();
+					lblIntentos.setText(String.valueOf(partida.getIntentos()));
 					
 				}
 				btnA.setEnabled(false);
