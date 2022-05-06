@@ -40,10 +40,10 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Funciones gestion intentos
 ##### - Generar palabra
 ##### - Modificar número de vidas
-##### - Comprobar coincidencia palabra
+##### - ~~Comprobar coincidencia palabra~~
 ##### - Restar pistas
 ##### - Gestion intentos
-##### - Volver a empezar
+##### - Volver a empezar~~
 
 
 Joan Hurtado --> 
