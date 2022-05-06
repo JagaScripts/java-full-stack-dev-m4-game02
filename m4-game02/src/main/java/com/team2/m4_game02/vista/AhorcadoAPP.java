@@ -243,6 +243,30 @@ public class AhorcadoAPP extends JFrame {
 		btnE.setBounds(210, 242, 50, 50);
 		contentPane.add(btnE);
 		
+		JButton btnPista = new JButton("");
+		btnPista.setBackground(Color.RED);
+		btnPista.setForeground(Color.BLACK);
+		btnPista.setBounds(10, 21, 50, 50);
+		contentPane.add(btnPista);
+		
+		JButton btnPista1 = new JButton("");
+		btnPista1.setBackground(Color.RED);
+		btnPista1.setForeground(Color.BLACK);
+		btnPista1.setBounds(60, 21, 50, 50);
+		contentPane.add(btnPista1);
+		
+		JButton btnPista2 = new JButton("");
+		btnPista2.setBackground(Color.RED);
+		btnPista2.setForeground(Color.BLACK);
+		btnPista2.setBounds(110, 21, 50, 50);
+		contentPane.add(btnPista2);
+		
+		JButton btnPista3 = new JButton("");
+		btnPista3.setBackground(Color.RED);
+		btnPista3.setForeground(Color.BLACK);
+		btnPista3.setBounds(160, 21, 50, 50);
+		contentPane.add(btnPista3);
+		
 		
 		
 		
