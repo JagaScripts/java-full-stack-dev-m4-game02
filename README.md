@@ -21,7 +21,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 #### Crear funcionalidad componentes
 ##### - Componente secuencia de imagenes
 ##### - Submenús Salir, Nuevo Juego dentro Menú Juego
-##### - Menú Acerca de
+##### - ~~Menú Acerca de~~
 ##### - Grupo pistas botones rojos
 ##### - Grupo palabra secreta labels "_"
 ##### - Grupo Letras teclado
@@ -40,14 +40,15 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - Funciones gestion intentos
 ##### - Generar palabra
 ##### - Modificar número de vidas
-##### - ~~Comprobar coincidencia palabra~~
+##### - Comprobar coincidencia palabra
 ##### - Restar pistas
 ##### - Gestion intentos
-##### - Volver a empezar~~
+##### - Volver a empezar
+##### - Partida
 
 
-Joan Hurtado --> 
+Joan Hurtado -->  Partida
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Organizar ramas y git
+Jose A González Alcántara --> Crear funcionalidad componentes - Grupo palabra secreta labels "_"
