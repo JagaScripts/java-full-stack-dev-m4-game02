@@ -13,6 +13,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -55,7 +56,7 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(250, 11, 174, 206);
+		panel.setBounds(250, 33, 174, 206);
 		contentPane.add(panel);
 		
 		//Numero para que vaya cambiando de imagen en la ruta
@@ -64,6 +65,19 @@ public class AhorcadoAPP extends JFrame {
 		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);		//Ruta de las imagenes más variable para ir cambiando
 		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+numero+".jpg")));
 		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Intentos Fallidos:");
+		lblNewLabel_1.setBounds(252, 8, 95, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		int intentosFallidos = 0;
+		JLabel lblNewLabel_2 = new JLabel(intentosFallidos + "");
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setBounds(355, 8, 46, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		//Metodo para sumar intentos fallidos
+				
 		
 		
 		
