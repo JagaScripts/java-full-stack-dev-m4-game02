@@ -11,11 +11,14 @@ import javax.swing.JMenuBar;
 import javax.swing.JButton;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -83,7 +86,7 @@ public class AhorcadoAPP extends JFrame {
 		
 		//ComboBox con las palabrass
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(328, 506, 145, 22);
+		comboBox.setBounds(426, 520, 145, 22);
 		comboBox.addItem("perro");
 		comboBox.addItem("gato");
 		contentPane.add(comboBox);
@@ -91,7 +94,13 @@ public class AhorcadoAPP extends JFrame {
 		
 		//Metodo para añadir palabras
 		
-		
+		//Menu Acerca De
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null,acercaDe());
+			}
+		});
 		
 		
 		
@@ -138,8 +147,7 @@ public class AhorcadoAPP extends JFrame {
 		
 		/*Jose */
 		
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
+
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
@@ -280,5 +288,15 @@ public class AhorcadoAPP extends JFrame {
 
 			
 		
+	}
+	
+	private String acercaDe() {
+		String informacion;
+		
+		informacion = "Juego del Ahorcado \n" +
+					"Creado por: \n" + 
+				" -Daniel Fernandez \n -Joan Hurtado \n -Jose A. Gonzàlez";
+		
+		return informacion;
 	}
 }
