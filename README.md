@@ -12,7 +12,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - ~~Componente secuencia de imagenes~~
 ##### - ~~Submenús Salir, Nuevo Juego dentro Menú Juego~~
 ##### - ~~Menú Acerca de~~
-##### - Grupo pistas botones rojos
+##### - ~~Grupo pistas botones rojos~~
 ##### - Grupo palabra secreta labels "_"
 ##### - ~~Grupo Letras teclado~~
 ##### - ~~Lista de imagenes ahorcado~~
@@ -50,4 +50,4 @@ Joan Hurtado --> ListBox con 10 palabras
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Grupo pistas botones rojos
+Jose A González Alcántara --> Grupo palabra secreta labels "_"
