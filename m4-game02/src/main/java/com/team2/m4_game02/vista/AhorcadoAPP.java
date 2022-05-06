@@ -1,11 +1,13 @@
 package com.team2.m4_game02.vista;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import PalabrasAleatorias.EtiquetaLetra;
+
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JButton;
@@ -14,6 +16,8 @@ import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -39,6 +43,7 @@ public class AhorcadoAPP extends JFrame {
 	 * Create the frame.
 	 */
 	public AhorcadoAPP() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 597, 614);
 		
@@ -54,26 +59,26 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JPanel panel = new JPanel();
-		panel.setBounds(250, 33, 174, 206);
-		contentPane.add(panel);
-		
 		//Numero para que vaya cambiando de imagen en la ruta
 		int numero = 0;
+		JPanel panel = new JPanel();
+		panel.setBounds(397, 39, 174, 206);
+		contentPane.add(panel);
 		JLabel lblNewLabel = new JLabel("");
+		panel.add(lblNewLabel);
 		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);		//Ruta de las imagenes más variable para ir cambiando
 		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+numero+".jpg")));
-		panel.add(lblNewLabel);
+		
+		
 		
 		JLabel lblNewLabel_1 = new JLabel("Intentos Fallidos:");
-		lblNewLabel_1.setBounds(252, 8, 95, 14);
+		lblNewLabel_1.setBounds(422, 14, 95, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		int intentosFallidos = 0;
 		JLabel lblNewLabel_2 = new JLabel(intentosFallidos + "");
 		lblNewLabel_2.setForeground(Color.RED);
-		lblNewLabel_2.setBounds(355, 8, 46, 14);
+		lblNewLabel_2.setBounds(525, 14, 46, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		//Metodo para sumar intentos fallidos
@@ -266,6 +271,22 @@ public class AhorcadoAPP extends JFrame {
 		btnPista3.setForeground(Color.BLACK);
 		btnPista3.setBounds(160, 21, 50, 50);
 		contentPane.add(btnPista3);
+		
+		ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
+		String palabra = new String("Ahorcado");
+		int xLetra = 10;
+		for (int i = 0; i < palabra.length(); i++) {
+			
+			listaEtiquetasLetras.add(new EtiquetaLetra(xLetra, 180));
+			xLetra += 50;
+			contentPane.add(listaEtiquetasLetras.get(i));
+		}
+		
+			/*EtiquetaLetra etiquetaLetra = (EtiquetaLetra) iteratorLetras.next();
+			contentPane.add(etiquetaLetra);*/
+			
+	
+		
 		
 		
 		
