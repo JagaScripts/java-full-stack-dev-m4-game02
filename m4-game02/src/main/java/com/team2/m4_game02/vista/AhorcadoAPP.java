@@ -5,19 +5,22 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import PalabrasAleatorias.EtiquetaLetra;
-
+import com.team2.m4_game02.controler.Partida;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JButton;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Iterator;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -82,12 +85,27 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		//Metodo para sumar intentos fallidos
-				
 		
 		
+		//ComboBox con las palabrass
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(426, 520, 145, 22);
+		comboBox.addItem("perro");
+		comboBox.addItem("gato");
+		contentPane.add(comboBox);
+		comboBox.setVisible(false);
 		
+		//Metodo para añadir palabras
 		
+		//Menu Acerca De
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null,acercaDe());
+			}
+		});
 		
+	
 		
 		
 		
@@ -133,8 +151,7 @@ public class AhorcadoAPP extends JFrame {
 		
 		/*Jose */
 		
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
+
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
@@ -248,6 +265,7 @@ public class AhorcadoAPP extends JFrame {
 		btnE.setBounds(210, 242, 50, 50);
 		contentPane.add(btnE);
 		
+
 		JButton btnPista = new JButton("");
 		btnPista.setBackground(Color.RED);
 		btnPista.setForeground(Color.BLACK);
@@ -271,7 +289,10 @@ public class AhorcadoAPP extends JFrame {
 		btnPista3.setForeground(Color.BLACK);
 		btnPista3.setBounds(160, 21, 50, 50);
 		contentPane.add(btnPista3);
+
+			
 		
+
 		ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
 		String palabra = new String("Ahorcado");
 		int xLetra = 10;
@@ -284,15 +305,17 @@ public class AhorcadoAPP extends JFrame {
 		
 			/*EtiquetaLetra etiquetaLetra = (EtiquetaLetra) iteratorLetras.next();
 			contentPane.add(etiquetaLetra);*/
-			
+
+	}
 	
+	private String acercaDe() {
+		String informacion;
+
 		
+		informacion = "Juego del Ahorcado \n" +
+					"Creado por: \n" + 
+				" -Daniel Fernandez \n -Joan Hurtado \n -Jose A. Gonzàlez";
 		
-		
-		
-		
-		
-		
-		
+		return informacion;
 	}
 }
