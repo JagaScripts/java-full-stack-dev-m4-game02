@@ -51,4 +51,4 @@ Joan Hurtado -->  Partida
 
 Daniel Fernandez --> Funciones gestion intentos, Generar palabra
 
-Jose A González Alcántara --> Descanso
+Jose A González Alcántara --> Grupo Letras teclado
