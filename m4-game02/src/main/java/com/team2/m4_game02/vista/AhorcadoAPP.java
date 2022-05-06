@@ -128,6 +128,13 @@ public class AhorcadoAPP extends JFrame {
 		
 		/*Jose */
 		
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
+		mnNewMenu.add(mntmNewMenuItem_2);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
+		mnNewMenu.add(mntmNewMenuItem_1);
+		
 		JButton btnY = new JButton("Y");
 		btnY.setBounds(10, 492, 50, 50);
 		contentPane.add(btnY);
