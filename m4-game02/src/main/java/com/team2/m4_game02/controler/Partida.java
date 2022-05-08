@@ -1,5 +1,7 @@
 package com.team2.m4_game02.controler;
 
+import java.util.Random;
+
 public class Partida {
 
 	private PalabrasAleatioras palabraObjeto;
@@ -170,6 +172,21 @@ public class Partida {
 		}
 		
 		return resultadoPartida;
+	}
+	
+	public char usarPista() {
+		
+		char letraPista = 0;
+		pistas--;
+		
+	    Random rand = new Random();
+	    int indiceLetra=rand.nextInt(palabraModificada.length());
+	   
+	    letraPista=palabraModificada.charAt(indiceLetra);
+		
+	    
+	    return letraPista;
+		
 	}
 	
 
