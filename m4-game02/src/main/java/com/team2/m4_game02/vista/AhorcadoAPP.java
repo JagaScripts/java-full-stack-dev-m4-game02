@@ -17,6 +17,9 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
@@ -25,6 +28,7 @@ import java.awt.event.ActionEvent;
 public class AhorcadoAPP extends JFrame {
 
 	private JPanel contentPane;
+	//private final String[] letras = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 	Partida partida = new Partida();
 	String palabra = partida.getPalabra().toUpperCase();
 	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
@@ -153,70 +157,88 @@ public class AhorcadoAPP extends JFrame {
 		
 		
 		/*Jose */
-		
+		Hashtable<String, JButton> tablaDeBotones = new Hashtable<String, JButton>();
+		JButton btnTemporal;
+	
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
 		mnNewMenu.add(mntmNewMenuItem_1);
 		
+		
 		JButton btnY = new JButton("Y");
 		btnY.setBounds(10, 492, 50, 50);
+		tablaDeBotones.put("Y", btnY);
 		contentPane.add(btnY);
 		
 		JButton btnZ = new JButton("Z");
 		btnZ.setBounds(60, 492, 50, 50);
+		tablaDeBotones.put("Z", btnZ);
 		contentPane.add(btnZ);
 		
 		JButton btnT = new JButton("T");
 		btnT.setBounds(10, 442, 50, 50);
+		tablaDeBotones.put("T", btnT);
 		contentPane.add(btnT);
 		
 		JButton btnU = new JButton("U");
 		btnU.setBounds(60, 442, 50, 50);
+		tablaDeBotones.put("U", btnU);
 		contentPane.add(btnU);
 		
 		JButton btnO = new JButton("O");
 		btnO.setBounds(10, 392, 50, 50);
+		tablaDeBotones.put("O", btnO);
 		contentPane.add(btnO);
 		
 		JButton btnP = new JButton("P");
 		btnP.setBounds(60, 392, 50, 50);
+		tablaDeBotones.put("P", btnP);
 		contentPane.add(btnP);
 		
 		JButton btnQ = new JButton("Q");
 		btnQ.setBounds(110, 392, 50, 50);
+		tablaDeBotones.put("Q", btnQ);
 		contentPane.add(btnQ);
 		
 		JButton btnV = new JButton("V");
 		btnV.setBounds(110, 442, 50, 50);
+		tablaDeBotones.put("V", btnV);
 		contentPane.add(btnV);
 		
 		JButton btnR = new JButton("R");
 		btnR.setBounds(160, 392, 50, 50);
+		tablaDeBotones.put("R", btnR);
 		contentPane.add(btnR);
 		
 		JButton btnW = new JButton("W");
 		btnW.setBounds(160, 442, 50, 50);
+		tablaDeBotones.put("W", btnW);
 		contentPane.add(btnW);
 		
 		JButton btnX = new JButton("X");
 		btnX.setBounds(210, 442, 50, 50);
+		tablaDeBotones.put("X", btnX);
 		contentPane.add(btnX);
 		
 		JButton btnS = new JButton("S");
 		btnS.setBounds(210, 392, 50, 50);
+		tablaDeBotones.put("S", btnS);
 		contentPane.add(btnS);
 		
 		JButton btnK = new JButton("K");
 		btnK.setBounds(10, 342, 50, 50);
+		tablaDeBotones.put("K", btnK);
 		contentPane.add(btnK);
 		
 		JButton btnL = new JButton("L");
 		btnL.setBounds(60, 342, 50, 50);
+		tablaDeBotones.put("L", btnL);
 		contentPane.add(btnL);
 		
 		JButton btnF = new JButton("F");
 		btnF.setBounds(10, 292, 50, 50);
+		tablaDeBotones.put("F", btnF);
 		contentPane.add(btnF);
 		
 		JButton btnA = new JButton("A");
@@ -241,50 +263,62 @@ public class AhorcadoAPP extends JFrame {
 			}
 		});
 		btnA.setBounds(10, 242, 50, 50);
+		tablaDeBotones.put("A", btnA);
 		contentPane.add(btnA);
 		
 		JButton btnM = new JButton("M");
 		btnM.setBounds(110, 342, 50, 50);
+		tablaDeBotones.put("M", btnM);
 		contentPane.add(btnM);
 		
 		JButton btnN = new JButton("N");
 		btnN.setBounds(160, 342, 50, 50);
+		tablaDeBotones.put("N", btnN);
 		contentPane.add(btnN);
 		
 		JButton btnNY = new JButton("Ñ");
 		btnNY.setBounds(210, 342, 50, 50);
+		tablaDeBotones.put("Ñ", btnNY);
 		contentPane.add(btnNY);
 		
 		JButton btnG = new JButton("G");
 		btnG.setBounds(60, 292, 50, 50);
+		tablaDeBotones.put("G", btnG);
 		contentPane.add(btnG);
 		
 		JButton btnH = new JButton("H");
 		btnH.setBounds(110, 292, 50, 50);
+		tablaDeBotones.put("H", btnH);
 		contentPane.add(btnH);
 		
 		JButton btnI = new JButton("I");
 		btnI.setBounds(160, 292, 50, 50);
+		tablaDeBotones.put("I", btnI);
 		contentPane.add(btnI);
 		
 		JButton btnJ = new JButton("J");
 		btnJ.setBounds(210, 292, 50, 50);
+		tablaDeBotones.put("J", btnJ);
 		contentPane.add(btnJ);
 		
 		JButton btnB = new JButton("B");
 		btnB.setBounds(60, 242, 50, 50);
+		tablaDeBotones.put("B", btnB);
 		contentPane.add(btnB);
 		
 		JButton btnC = new JButton("C");
 		btnC.setBounds(110, 242, 50, 50);
+		tablaDeBotones.put("C", btnC);
 		contentPane.add(btnC);
 		
 		JButton btnD = new JButton("D");
 		btnD.setBounds(160, 242, 50, 50);
+		tablaDeBotones.put("D", btnD);
 		contentPane.add(btnD);
 		
 		JButton btnE = new JButton("E");
 		btnE.setBounds(210, 242, 50, 50);
+		tablaDeBotones.put("E", btnE);
 		contentPane.add(btnE);
 		
 
@@ -307,6 +341,15 @@ public class AhorcadoAPP extends JFrame {
 		contentPane.add(btnPista2);
 		
 		JButton btnPista3 = new JButton("");
+		btnPista3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				char letra = partida.usarPista();
+				tablaDeBotones.get(String.valueOf(letra)).setEnabled(false);
+				
+				
+			}
+		});
 		btnPista3.setBackground(Color.RED);
 		btnPista3.setForeground(Color.BLACK);
 		btnPista3.setBounds(160, 21, 50, 50);

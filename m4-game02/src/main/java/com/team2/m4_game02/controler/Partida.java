@@ -184,6 +184,14 @@ public class Partida {
 	   
 	    letraPista=palabraModificada.charAt(indiceLetra);
 		
+	    for (int i = 0; i < this.palabraModificada.length(); i++) {
+			
+			if (letraPista == this.palabraModificada.charAt(i)) {
+				
+				modificadorPalabra.deleteCharAt(i);
+
+			}
+		}
 	    
 	    return letraPista;
 		
