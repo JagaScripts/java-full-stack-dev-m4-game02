@@ -4,13 +4,18 @@ public class Partida {
 
 	private PalabrasAleatioras palabraObjeto;
 	private String palabra;
+	private String palabraSinLetras;
+	private StringBuilder modificadorPalabra ;
 	private int intentosFallidos;
+	private int pistas;
 
 	public Partida() {
 		this.palabraObjeto = new PalabrasAleatioras();
-
 		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
+		this.pistas = 4;
+		
 	}
 
 	private boolean intentosDisponibles() {
@@ -75,16 +80,51 @@ public class Partida {
 	public boolean comprobarletras(char letraU) {//Se le pasa la letra introducida
 
 		char letra;
+		int cuentaLetras = 0;
+		
 
 		for (int i = 0; i < this.palabra.length(); i++) {
+			
 			letra = this.palabra.charAt(i);
+			
 			if (letra == letraU) {
-				return true;
+				
+				modificadorPalabra.deleteCharAt(i);
+				cuentaLetras++;
+
 			}
 		}
-		return false;
+		
+		if (cuentaLetras != 0) {
+			
+			this.palabraSinLetras = modificadorPalabra.toString();
+			
+			return true;
+			
+		} else {
+			
+			return false;
+
+		}
+		
 	}
 	
+	
 
+	/**
+	 * @return the pistas
+	 */
+	public int getPistas() {
+		return pistas;
+	}
+
+	/**
+	 * @param pistas the pistas to set
+	 */
+	public void setPistas(int pistas) {
+		this.pistas = pistas;
+	}
+	
+	//public darPista
 
 }

@@ -224,9 +224,10 @@ public class AhorcadoAPP extends JFrame {
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if (partida.comprobarletras(btnA.getText().charAt(0))) {
+				char letraPulsada = btnA.getText().charAt(0);
+				if (partida.comprobarletras(letraPulsada)) {
 					
-					cambiarLetra(btnA.getText().charAt(0));
+					cambiarLetra(letraPulsada);
 					
 				}else {
 					
