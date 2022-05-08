@@ -189,7 +189,7 @@ public class AhorcadoAPP extends JFrame {
 						
 					}
 					((JButton) e.getSource()).setEnabled(false);
-					if (partida.comprobarPartida()) {
+					if (!partida.comprobarPartida()) {
 						
 						
 						
