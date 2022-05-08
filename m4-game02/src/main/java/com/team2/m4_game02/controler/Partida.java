@@ -174,9 +174,6 @@ public class Partida {
 		return resultadoPartida;
 	}
 	
-<<<<<<< HEAD
-	
-=======
 	public char usarPista() {
 		
 		char letraPista = 0;
@@ -193,5 +190,5 @@ public class Partida {
 	}
 	
 
->>>>>>> 466cfa6a1d24007feb3a417523527f5b3ac75e5e
+
 }
