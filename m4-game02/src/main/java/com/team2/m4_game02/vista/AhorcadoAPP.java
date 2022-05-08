@@ -154,7 +154,6 @@ public class AhorcadoAPP extends JFrame {
 		
 		/*Jose */
 		
-
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");

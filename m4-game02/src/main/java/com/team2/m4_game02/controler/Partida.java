@@ -172,5 +172,5 @@ public class Partida {
 		return resultadoPartida;
 	}
 	
-
+	
 }
