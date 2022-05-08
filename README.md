@@ -5,7 +5,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 ![Image](https://github.com/JagaScripts/java-full-stack-dev-m4-game02/blob/master/FlujoAhorcado.jpg)
 
-## Lista de featrues a realizar
+## Lista de features a realizar
 
 ### Vista
 #### Crear vista diseñador
