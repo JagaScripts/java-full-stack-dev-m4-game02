@@ -4,28 +4,22 @@ public class Partida {
 
 	private PalabrasAleatioras palabraObjeto;
 	private String palabra;
-	private String palabraSinLetras;
+	private String palabraModificada;
 	private StringBuilder modificadorPalabra ;
 	private int intentosFallidos;
 	private int pistas;
+	private boolean estadoPartida;
+	private boolean resultadoPartida;
 
 	public Partida() {
 		this.palabraObjeto = new PalabrasAleatioras();
 		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
 		this.pistas = 4;
-		
-	}
-
-	private boolean intentosDisponibles() {
-
-		// Si tiene más intentos es true
-		if (this.intentosFallidos <= 7) {
-			return true;
-		} else { // Si no es false y finalizaria la partida
-			return false;
-		}
+		this.estadoPartida = true;
+		this.resultadoPartida = false;
 	}
 
 	public void sumarIntentos() { //Si comprobarLetras es false se resta un intento
@@ -80,32 +74,31 @@ public class Partida {
 	public boolean comprobarletras(char letraU) {//Se le pasa la letra introducida
 
 		char letra;
-		int cuentaLetras = 0;
+		boolean cuentaLetras = false;
 		
-
-		for (int i = 0; i < this.palabra.length(); i++) {
+		for (int i = 0; i < this.palabraModificada.length(); i++) {
 			
-			letra = this.palabra.charAt(i);
+			letra = this.palabraModificada.charAt(i);
 			
 			if (letra == letraU) {
 				
 				modificadorPalabra.deleteCharAt(i);
-				cuentaLetras++;
+				cuentaLetras = true;
 
 			}
 		}
 		
-		if (cuentaLetras != 0) {
+		if (cuentaLetras) {
 			
-			this.palabraSinLetras = modificadorPalabra.toString();
-			
-			return true;
+			this.palabraModificada = modificadorPalabra.toString();
 			
 		} else {
 			
-			return false;
-
+			this.sumarIntentos();
+			
 		}
+			
+		return cuentaLetras;
 		
 	}
 	
@@ -125,6 +118,59 @@ public class Partida {
 		this.pistas = pistas;
 	}
 	
-	//public darPista
+	public boolean comprobarPartida() {
+		
+		if (palabraModificada.isEmpty() || this.intentosFallidos == 6) {
+			
+			setEstadoPartida(false);
+			
+		}
+		
+		return estadoPartida;
+	}
+
+	/**
+	 * @return the estadoPartida
+	 */
+	public boolean isEstadoPartida() {
+		return estadoPartida;
+	}
+
+	/**
+	 * @param estadoPartida the estadoPartida to set
+	 */
+	public void setEstadoPartida(boolean estadoPartida) {
+		this.estadoPartida = estadoPartida;
+	}
+
+	/**
+	 * @return the resultadoPartida
+	 */
+	public boolean isResultadoPartida() {
+		return resultadoPartida;
+	}
+
+	/**
+	 * @param resultadoPartida the resultadoPartida to set
+	 */
+	public void setResultadoPartida(boolean resultadoPartida) {
+		this.resultadoPartida = resultadoPartida;
+	}
+	
+	public boolean comprobarGanado() {
+		
+		if (palabraModificada.isEmpty()) {
+			
+			setResultadoPartida(true);
+			
+		}else if (this.intentosFallidos == 6) {
+			
+			setResultadoPartida(false);
+			
+		}
+		
+		return resultadoPartida;
+	}
+	
 
 }

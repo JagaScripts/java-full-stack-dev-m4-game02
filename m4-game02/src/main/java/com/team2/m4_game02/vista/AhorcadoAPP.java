@@ -231,11 +231,13 @@ public class AhorcadoAPP extends JFrame {
 					
 				}else {
 					
-					partida.sumarIntentos();
 					lblIntentos.setText(String.valueOf(partida.getIntentos()));
 					
 				}
 				btnA.setEnabled(false);
+				if (partida.comprobarPartida()) {
+					
+				}
 			
 			}
 		});
