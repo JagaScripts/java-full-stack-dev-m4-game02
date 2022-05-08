@@ -5,7 +5,7 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 ![Image](https://github.com/JagaScripts/java-full-stack-dev-m4-game02/blob/master/FlujoAhorcado.jpg)
 
-## Lista de featrues a realizar
+## Lista de features a realizar
 
 ### Vista
 #### Crear vista diseñador
@@ -26,8 +26,8 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 ##### - ~~Grupo palabra secreta labels "_"~~
 ##### - Grupo Letras teclado
 ##### - Lista de imagenes ahorcado
-##### - ListBox con 10 palabras
-##### - Label de intentos fallidos
+##### - ~~ListBox con 10 palabras~~
+##### - ~~Label de intentos fallidos~~
 ##### - Mostrar letra
 ##### - Mostras secuencia de imagen
 ##### - Inahbilitar botón letra
@@ -37,18 +37,18 @@ M4 Implementación juego 02 ahorcado Autores Daniel Fernández Cacho / Joan Hurt
 
 ### Modelo/Controler
 ##### - ~~Lista de palabras para generar aleatoriamente~~
-##### - Funciones gestion intentos
+##### - ~~Funciones gestion intentos~~
 ##### - Generar palabra
-##### - Modificar número de vidas
-##### - Comprobar coincidencia palabra
+##### - ~~Modificar número de vidas~~
+##### - ~~Comprobar coincidencia palabra~~
 ##### - Restar pistas
-##### - Gestion intentos
+##### - ~~Gestion intentos~~
 ##### - Volver a empezar
 ##### - Partida
 
 
 Joan Hurtado -->  Partida
 
-Daniel Fernandez --> Funciones gestion intentos, Generar palabra
+Daniel Fernandez --> 
 
 Jose A González Alcántara --> Grupo Letras teclado
