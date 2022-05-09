@@ -72,35 +72,21 @@ public class Partida {
 		this.intentosFallidos = intentos;
 	}
 	
-
+	/**
+	 * 
+	 * @param letraU
+	 * @return si no se extrae letra se suma un intento y devuelve false sino decuelve true
+	 */
 	public boolean comprobarletras(char letraU) {//Se le pasa la letra introducida
-
-		char letra;
-		boolean cuentaLetras = false;
 		
-		for (int i = 0; i < this.palabraModificada.length(); i++) {
-			
-			letra = this.palabraModificada.charAt(i);
-			
-			if (letra == letraU) {
-				
-				modificadorPalabra.deleteCharAt(i);
-				cuentaLetras = true;
-
-			}
-		}
-		
-		if (cuentaLetras) {
-			
-			this.palabraModificada = modificadorPalabra.toString();
-			
-		} else {
+		if (!extraerLetras(letraU)) {
 			
 			this.sumarIntentos();
+			return false;
 			
-		}
+		} 
 			
-		return cuentaLetras;
+		return true;
 		
 	}
 	
@@ -120,7 +106,12 @@ public class Partida {
 		this.pistas = pistas;
 	}
 	
+	/**
+	 * hay partida mientras a la palabra le quedan letras o no ha superado los intentos fallidos 
+	 * @return devuelve el estado de la partida
+	 */
 	public boolean comprobarPartida() {
+		
 		
 		if (palabraModificada.isEmpty() || this.intentosFallidos == 6) {
 			
@@ -159,6 +150,10 @@ public class Partida {
 		this.resultadoPartida = resultadoPartida;
 	}
 	
+	/**
+	 * Comprueba si el jugador ha ganado la partida y cambia el resultado de la partida
+	 * @return devuelve true si el jugador es ganador y false si ha perdido
+	 */
 	public boolean comprobarGanado() {
 		
 		if (palabraModificada.isEmpty()) {
@@ -174,29 +169,49 @@ public class Partida {
 		return resultadoPartida;
 	}
 	
+	/**
+	 * 
+	 * @return devuelve una letra para dar pista
+	 */
 	public char usarPista() {
 		
 		char letraPista = 0;
 		pistas--;
 		
 	    Random rand = new Random();
-	    int indiceLetra=rand.nextInt(palabraModificada.length());
+	    int indiceLetra = rand.nextInt(palabraModificada.length());
 	   
-	    letraPista=palabraModificada.charAt(indiceLetra);
+	    letraPista = palabraModificada.charAt(indiceLetra);
+	    
+		extraerLetras(letraPista);
 		
-	    for (int i = 0; i < this.palabraModificada.length(); i++) {
-			
-			if (letraPista == this.palabraModificada.charAt(i)) {
-				
-				modificadorPalabra.deleteCharAt(i);
-
-			}
-		}
 	    
 	    return letraPista;
 		
 	}
 	
+	/**
+	 * Este método extrae las coincidencias del caracter pasado pora metro
+	 * @param letra a extraer si existe
+	 * @return false si no ha encontrado ninguna letra y true si ha encontrado alguna
+	 */
+	private boolean extraerLetras(char letra) {
+		
+		boolean cuentaLetras = false;
+		
+		int i = 0;
+		
+		while (this.palabraModificada.length() > 0 && i < this.palabraModificada.length()) {
 
+			if (letra == this.palabraModificada.charAt(i)) {
+
+				modificadorPalabra.deleteCharAt(i);
+				this.palabraModificada = modificadorPalabra.toString();
+				cuentaLetras = true;
+			}
+			i++;
+		}
+		return cuentaLetras;
+	}
 
 }
