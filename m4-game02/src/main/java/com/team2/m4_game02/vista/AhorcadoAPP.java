@@ -25,6 +25,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class AhorcadoAPP extends JFrame {
 
@@ -82,6 +83,10 @@ public class AhorcadoAPP extends JFrame {
 		panel.add(lblNewLabel);
 		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);		//Ruta de las imagenes más variable para ir cambiando
 		lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+partida.getIntentos()+".jpg")));
+		
+		JLabel lblResultado = new JLabel("");
+		lblResultado.setBounds(475, 262, 174, 176);
+		contentPane.add(lblResultado);
 		
 		
 		
@@ -167,11 +172,11 @@ public class AhorcadoAPP extends JFrame {
 						
 						if (partida.comprobarGanado()) {
 							
-							lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+							lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 							
 						}else {
 							
-							lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+							lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 							
 						}
 						
@@ -212,11 +217,11 @@ public class AhorcadoAPP extends JFrame {
 					
 					if (partida.comprobarGanado()) {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 						
 					}else {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 						
 					}
 					
@@ -245,11 +250,11 @@ public class AhorcadoAPP extends JFrame {
 					
 					if (partida.comprobarGanado()) {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 						
 					}else {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 						
 					}
 				
@@ -278,11 +283,11 @@ public class AhorcadoAPP extends JFrame {
 					
 					if (partida.comprobarGanado()) {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 						
 					}else {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 						
 					}
 					
@@ -312,11 +317,11 @@ public class AhorcadoAPP extends JFrame {
 					
 					if (partida.comprobarGanado()) {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 						
 					}else {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 						
 					}
 					
@@ -345,11 +350,11 @@ public class AhorcadoAPP extends JFrame {
 					
 					if (partida.comprobarGanado()) {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
 						
 					}else {
 						
-						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						lblResultado.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
 						
 					}
 					
@@ -364,6 +369,13 @@ public class AhorcadoAPP extends JFrame {
 		btnPista4.setBounds(210, 21, 50, 50);
 		listaBotonesPistas.add(btnPista4);
 		contentPane.add(btnPista4);
+		
+		JLabel lblNewLabel_2 = new JLabel("PISTAS");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 23));
+		lblNewLabel_2.setBounds(10, 82, 86, 28);
+		contentPane.add(lblNewLabel_2);
+		
+
 
 		cargarLetras();
 		
@@ -464,5 +476,4 @@ public class AhorcadoAPP extends JFrame {
 		
 		
 	}
-	
 }
