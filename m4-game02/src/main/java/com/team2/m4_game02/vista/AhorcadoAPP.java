@@ -25,19 +25,16 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.ButtonGroup;
 
 public class AhorcadoAPP extends JFrame {
 
 	private JPanel contentPane;
-	private final String[] letras = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O",
-			"P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+	private final String[] letras = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 	Partida partida = new Partida();
 	String palabra = partida.getPalabra().toUpperCase();
-	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();<<<<<<<HEAD
-	private final ButtonGroup grupoBotonesLetras = new ButtonGroup();=======
+	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
 	ArrayList<JButton> listaBotonesPistas = new ArrayList<JButton>();
-	Hashtable<String, JButton> tablaDeBotones = new Hashtable<String, JButton>();>>>>>>>0e38d f2a0106829f4b5cdd96967b3eeea68a5e4f
+	Hashtable<String, JButton> tablaDeBotones = new Hashtable<String, JButton>();
 
 	/**
 	 * Launch the application.
@@ -192,185 +189,14 @@ public class AhorcadoAPP extends JFrame {
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Salir");
-<<<<<<< HEAD
-		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		
-		JButton btnY = new JButton("Y");
-		grupoBotonesLetras.add(btnY);
-		btnY.setBounds(10, 492, 50, 50);
-		tablaDeBotones.put("Y", btnY);
-		contentPane.add(btnY);
-		
-		JButton btnZ = new JButton("Z");
-		grupoBotonesLetras.add(btnZ);
-		btnZ.setBounds(60, 492, 50, 50);
-		tablaDeBotones.put("Z", btnZ);
-		contentPane.add(btnZ);
-		
-		JButton btnT = new JButton("T");
-		grupoBotonesLetras.add(btnT);
-		btnT.setBounds(10, 442, 50, 50);
-		tablaDeBotones.put("T", btnT);
-		contentPane.add(btnT);
-		
-		JButton btnU = new JButton("U");
-		grupoBotonesLetras.add(btnU);
-		btnU.setBounds(60, 442, 50, 50);
-		tablaDeBotones.put("U", btnU);
-		contentPane.add(btnU);
-		
-		JButton btnO = new JButton("O");
-		grupoBotonesLetras.add(btnO);
-		btnO.setBounds(10, 392, 50, 50);
-		tablaDeBotones.put("O", btnO);
-		contentPane.add(btnO);
-		
-		JButton btnP = new JButton("P");
-		grupoBotonesLetras.add(btnP);
-		btnP.setBounds(60, 392, 50, 50);
-		tablaDeBotones.put("P", btnP);
-		contentPane.add(btnP);
-		
-		JButton btnQ = new JButton("Q");
-		grupoBotonesLetras.add(btnQ);
-		btnQ.setBounds(110, 392, 50, 50);
-		tablaDeBotones.put("Q", btnQ);
-		contentPane.add(btnQ);
-		
-		JButton btnV = new JButton("V");
-		grupoBotonesLetras.add(btnV);
-		btnV.setBounds(110, 442, 50, 50);
-		tablaDeBotones.put("V", btnV);
-		contentPane.add(btnV);
-		
-		JButton btnR = new JButton("R");
-		grupoBotonesLetras.add(btnR);
-		btnR.setBounds(160, 392, 50, 50);
-		tablaDeBotones.put("R", btnR);
-		contentPane.add(btnR);
-		
-		JButton btnW = new JButton("W");
-		grupoBotonesLetras.add(btnW);
-		btnW.setBounds(160, 442, 50, 50);
-		tablaDeBotones.put("W", btnW);
-		contentPane.add(btnW);
-		
-		JButton btnX = new JButton("X");
-		grupoBotonesLetras.add(btnX);
-		btnX.setBounds(210, 442, 50, 50);
-		tablaDeBotones.put("X", btnX);
-		contentPane.add(btnX);
-		
-		JButton btnS = new JButton("S");
-		grupoBotonesLetras.add(btnS);
-		btnS.setBounds(210, 392, 50, 50);
-		tablaDeBotones.put("S", btnS);
-		contentPane.add(btnS);
-		
-		JButton btnK = new JButton("K");
-		grupoBotonesLetras.add(btnK);
-		btnK.setBounds(10, 342, 50, 50);
-		tablaDeBotones.put("K", btnK);
-		contentPane.add(btnK);
-		
-		JButton btnL = new JButton("L");
-		grupoBotonesLetras.add(btnL);
-		btnL.setBounds(60, 342, 50, 50);
-		tablaDeBotones.put("L", btnL);
-		contentPane.add(btnL);
-		
-		JButton btnF = new JButton("F");
-		grupoBotonesLetras.add(btnF);
-		btnF.setBounds(10, 292, 50, 50);
-		tablaDeBotones.put("F", btnF);
-		contentPane.add(btnF);
-		
-		JButton btnA = new JButton("A");
-		grupoBotonesLetras.add(btnA);
-		btnA.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				System.exit(0);
 				
 			}
-			});
-
-		btnA.setBounds(10, 242, 50, 50);
-		tablaDeBotones.put("A", btnA);
-		contentPane.add(btnA);
-		
-		JButton btnM = new JButton("M");
-		grupoBotonesLetras.add(btnM);
-		btnM.setBounds(110, 342, 50, 50);
-		tablaDeBotones.put("M", btnM);
-		contentPane.add(btnM);
-		
-		JButton btnN = new JButton("N");
-		grupoBotonesLetras.add(btnN);
-		btnN.setBounds(160, 342, 50, 50);
-		tablaDeBotones.put("N", btnN);
-		contentPane.add(btnN);
-		
-		JButton btnNY = new JButton("Ñ");
-		grupoBotonesLetras.add(btnNY);
-		btnNY.setBounds(210, 342, 50, 50);
-		tablaDeBotones.put("Ñ", btnNY);
-		contentPane.add(btnNY);
-		
-		JButton btnG = new JButton("G");
-		grupoBotonesLetras.add(btnG);
-		btnG.setBounds(60, 292, 50, 50);
-		tablaDeBotones.put("G", btnG);
-		contentPane.add(btnG);
-		
-		JButton btnH = new JButton("H");
-		grupoBotonesLetras.add(btnH);
-		btnH.setBounds(110, 292, 50, 50);
-		tablaDeBotones.put("H", btnH);
-		contentPane.add(btnH);
-		
-		JButton btnI = new JButton("I");
-		grupoBotonesLetras.add(btnI);
-		btnI.setBounds(160, 292, 50, 50);
-		tablaDeBotones.put("I", btnI);
-		contentPane.add(btnI);
-		
-		JButton btnJ = new JButton("J");
-		grupoBotonesLetras.add(btnJ);
-		btnJ.setBounds(210, 292, 50, 50);
-		tablaDeBotones.put("J", btnJ);
-		contentPane.add(btnJ);
-		
-		JButton btnB = new JButton("B");
-		grupoBotonesLetras.add(btnB);
-		btnB.setBounds(60, 242, 50, 50);
-		tablaDeBotones.put("B", btnB);
-		contentPane.add(btnB);
-		
-		JButton btnC = new JButton("C");
-		grupoBotonesLetras.add(btnC);
-		btnC.setBounds(110, 242, 50, 50);
-		tablaDeBotones.put("C", btnC);
-		contentPane.add(btnC);
-		
-		JButton btnD = new JButton("D");
-		grupoBotonesLetras.add(btnD);
-		btnD.setBounds(160, 242, 50, 50);
-		tablaDeBotones.put("D", btnD);
-		contentPane.add(btnD);
-		
-		JButton btnE = new JButton("E");
-		grupoBotonesLetras.add(btnE);
-		btnE.setBounds(210, 242, 50, 50);
-		tablaDeBotones.put("E", btnE);
-		contentPane.add(btnE);
-		
-
-		//nNewMenu.add(mntmNewMenuItem_1);	
+		});
+		mnNewMenu.add(mntmNewMenuItem_1);	
 
 		
 		JButton btnPista = new JButton("");
@@ -508,10 +334,6 @@ public class AhorcadoAPP extends JFrame {
 
 		cargarLetras();
 		
-	/*	if(grupoBotonesLetras.getSelection().isPressed()) {
-			System.out.println(grupoBotonesLetras.getSelection().isPressed());
-		}
-	*/
 		
 		
 			/*EtiquetaLetra etiquetaLetra = (EtiquetaLetra) iteratorLetras.next();
