@@ -331,6 +331,39 @@ public class AhorcadoAPP extends JFrame {
 		btnPista3.setBounds(160, 21, 50, 50);
 		listaBotonesPistas.add(btnPista3);
 		contentPane.add(btnPista3);
+		
+		JButton btnPista4 = new JButton("");
+		btnPista4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				char letra = partida.usarPista();
+				cambiarLetra(letra);
+				tablaDeBotones.get(String.valueOf(letra)).setEnabled(false);
+				((JButton) e.getSource()).setBackground(Color.GREEN);
+				((JButton) e.getSource()).setEnabled(false);
+				if (!partida.comprobarPartida()) {
+					
+					if (partida.comprobarGanado()) {
+						
+						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/ganador.jpg")));
+						
+					}else {
+						
+						lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/perdedor.jpg")));
+						
+					}
+					
+					bloquearBotones();
+					
+				}
+				
+			}
+		});
+		btnPista4.setBackground(Color.RED);
+		btnPista4.setForeground(Color.BLACK);
+		btnPista4.setBounds(210, 21, 50, 50);
+		listaBotonesPistas.add(btnPista4);
+		contentPane.add(btnPista4);
 
 		cargarLetras();
 		
