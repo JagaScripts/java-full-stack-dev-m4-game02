@@ -20,8 +20,8 @@ public class Partida {
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
-		this.vidas = 6;
-		this.pistas = 4;
+		this.vidas = 10;
+		this.pistas = 5;
 		this.estadoPartida = true;
 		this.resultadoPartida = false;
 	}
