@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import com.team2.m4_game02.modelo.Partida;
-import com.team2.m4_game02.vista.componentes.EtiquetaLetra;
+import com.team2.m4_game02.vista.paneles.componentes.EtiquetaLetra;
 
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;

@@ -56,8 +56,8 @@ public class NuevaPartidaControler implements ActionListener{
 		panelLetras.cargarLetras();
 		panelPistas.resetPistas();
 		panelBotonesLetras.resetBotonesLetras(); 
-		panelImagnes.getLblIntentos().setText(partida.getIntentos() + ""); 
-		panelImagnes.getLblNewLabel().setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0" + partida.getIntentos() + ".jpg")));
+		panelImagnes.getLblNumeroIntentos().setText(partida.getIntentos() + ""); 
+		panelImagnes.getLblImgAhorrcado().setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0" + partida.getIntentos() + ".jpg")));
 		panelImagnes.getLblResultado().setIcon(null);
 		
 	}

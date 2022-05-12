@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.team2.m4_game02.vista.componentes;
+package com.team2.m4_game02.vista.paneles.componentes;
 
 import java.awt.Font;
 

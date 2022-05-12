@@ -1,9 +1,10 @@
 package com.team2.m4_game02.vista.paneles;
 
 import javax.swing.JPanel;
-
-import com.team2.m4_game02.vista.componentes.EtiquetaLetra;
 import javax.swing.border.TitledBorder;
+
+import com.team2.m4_game02.vista.paneles.componentes.EtiquetaLetra;
+
 import javax.swing.border.EtchedBorder;
 import java.awt.Color;
 import java.awt.FlowLayout;

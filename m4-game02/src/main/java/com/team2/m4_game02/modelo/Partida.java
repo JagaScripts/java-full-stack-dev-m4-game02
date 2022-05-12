@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class Partida {
 
-	private PalabrasAleatioras palabraObjeto;
 	private String palabra;
 	private String palabraModificada;
 	private StringBuilder modificadorPalabra;
@@ -15,8 +14,7 @@ public class Partida {
 	private int vidas;
 
 	public Partida() {
-		this.palabraObjeto = new PalabrasAleatioras();
-		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.palabra = generarPalabra().toUpperCase();
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
@@ -27,8 +25,7 @@ public class Partida {
 	}
 	
 	public Partida(int vidas) {
-		this.palabraObjeto = new PalabrasAleatioras();
-		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.palabra = generarPalabra().toUpperCase();
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
@@ -41,20 +38,6 @@ public class Partida {
 	public void sumarIntentos() { // Si comprobarLetras es false se resta un intento
 		this.intentosFallidos++;
 
-	}
-
-	/**
-	 * @return the palabraObjeto
-	 */
-	public PalabrasAleatioras getPalabraObjeto() {
-		return palabraObjeto;
-	}
-
-	/**
-	 * @param palabraObjeto the palabraObjeto to set
-	 */
-	public void setPalabraObjeto(PalabrasAleatioras palabraObjeto) {
-		this.palabraObjeto = palabraObjeto;
 	}
 
 	/**
@@ -240,6 +223,17 @@ public class Partida {
 		}
 
 		return cuentaLetras;
+	}
+	
+	private String generarPalabra () {
+		 String[] x = {"perro", "gato", "hola", "bien", "programar", "palabra", "azar","otra","casa","frio"};
+	        Random rand = new Random();
+
+	        int n = rand.nextInt(10);
+	        String z = x [n];
+	        
+	        return z;
+	        
 	}
 
 }
