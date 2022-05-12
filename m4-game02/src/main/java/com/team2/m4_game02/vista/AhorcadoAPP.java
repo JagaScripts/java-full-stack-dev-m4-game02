@@ -369,9 +369,8 @@ public class AhorcadoAPP extends JFrame {
 		tablaDeBotones.put("E", btnE);
 		contentPane.add(btnE);
 		
-=======
-		mnNewMenu.add(mntmNewMenuItem_1);	
->>>>>>> 0e38df2a0106829f4b5cdd96967b3eeea68a5e4f
+
+		//nNewMenu.add(mntmNewMenuItem_1);	
 
 		
 		JButton btnPista = new JButton("");
