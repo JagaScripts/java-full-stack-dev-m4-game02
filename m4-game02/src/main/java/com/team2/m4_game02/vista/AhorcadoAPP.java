@@ -6,7 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.team2.m4_game02.controler.Partida;
+import com.team2.m4_game02.modelo.Partida;
+import com.team2.m4_game02.vista.componentes.EtiquetaLetra;
+
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JButton;
@@ -17,12 +19,12 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Enumeration;
+
 import java.util.Hashtable;
 import java.util.Iterator;
 
 import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
