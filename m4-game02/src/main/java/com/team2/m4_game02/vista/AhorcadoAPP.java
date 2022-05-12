@@ -30,16 +30,14 @@ import javax.swing.ButtonGroup;
 public class AhorcadoAPP extends JFrame {
 
 	private JPanel contentPane;
-	private final String[] letras = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+	private final String[] letras = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O",
+			"P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 	Partida partida = new Partida();
 	String palabra = partida.getPalabra().toUpperCase();
-	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();
-<<<<<<< HEAD
-	private final ButtonGroup grupoBotonesLetras = new ButtonGroup();
-=======
+	ArrayList<EtiquetaLetra> listaEtiquetasLetras = new ArrayList<EtiquetaLetra>();<<<<<<<HEAD
+	private final ButtonGroup grupoBotonesLetras = new ButtonGroup();=======
 	ArrayList<JButton> listaBotonesPistas = new ArrayList<JButton>();
-	Hashtable<String, JButton> tablaDeBotones = new Hashtable<String, JButton>();
->>>>>>> 0e38df2a0106829f4b5cdd96967b3eeea68a5e4f
+	Hashtable<String, JButton> tablaDeBotones = new Hashtable<String, JButton>();>>>>>>>0e38d f2a0106829f4b5cdd96967b3eeea68a5e4f
 
 	/**
 	 * Launch the application.
@@ -299,6 +297,7 @@ public class AhorcadoAPP extends JFrame {
 				System.exit(0);
 				
 			}
+			});
 
 		btnA.setBounds(10, 242, 50, 50);
 		tablaDeBotones.put("A", btnA);
