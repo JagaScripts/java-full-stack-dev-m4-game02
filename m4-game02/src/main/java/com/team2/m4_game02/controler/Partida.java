@@ -2,9 +2,10 @@ package com.team2.m4_game02.controler;
 
 import java.util.Random;
 
+import javax.swing.JComboBox;
+
 public class Partida {
 
-	private PalabrasAleatioras palabraObjeto;
 	private String palabra;
 	private String palabraModificada;
 	private StringBuilder modificadorPalabra;
@@ -13,10 +14,12 @@ public class Partida {
 	private boolean estadoPartida;
 	private boolean resultadoPartida;
 	private int vidas;
+	private JComboBox comboBox;
 
 	public Partida() {
-		this.palabraObjeto = new PalabrasAleatioras();
-		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+
+		this.comboBox = new JComboBox();
+		this.palabra = this.GenerarPalabra().toUpperCase();
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
@@ -27,8 +30,8 @@ public class Partida {
 	}
 	
 	public Partida(int vidas) {
-		this.palabraObjeto = new PalabrasAleatioras();
-		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.comboBox = new JComboBox();
+		this.palabra = this.GenerarPalabra().toUpperCase();
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
@@ -37,25 +40,51 @@ public class Partida {
 		this.estadoPartida = true;
 		this.resultadoPartida = false;
 	}
+	
+	
+
+	public String GenerarPalabra() {
+
+
+		comboBox.setBounds(426, 520, 145, 22);
+		comboBox.addItem("perro");
+		comboBox.addItem("gato");
+		comboBox.addItem("hola");
+		comboBox.addItem("bien");
+		comboBox.addItem("programar");
+		comboBox.addItem("palabra");
+		comboBox.addItem("azar");
+		comboBox.addItem("otra");
+		comboBox.addItem("casa");
+		comboBox.addItem("frio");
+		comboBox.addItem("luffy");
+
+		comboBox.setVisible(false);
+
+		Random rand = new Random();
+
+		int n = rand.nextInt(comboBox.getItemCount());
+		String z = comboBox.getItemAt(n).toString();
+		System.out.println(z);
+		return z;
+
+	}
+	
+	public void AñadirPalabra(String palabra) {
+			
+		comboBox.addItem(palabra);
+		for (int i = 0; i < comboBox.getItemCount(); i++) {
+			System.out.println(comboBox.getItemAt(i).toString());
+		}
+	
+	}
+	
 
 	public void sumarIntentos() { // Si comprobarLetras es false se resta un intento
 		this.intentosFallidos++;
 
 	}
 
-	/**
-	 * @return the palabraObjeto
-	 */
-	public PalabrasAleatioras getPalabraObjeto() {
-		return palabraObjeto;
-	}
-
-	/**
-	 * @param palabraObjeto the palabraObjeto to set
-	 */
-	public void setPalabraObjeto(PalabrasAleatioras palabraObjeto) {
-		this.palabraObjeto = palabraObjeto;
-	}
 
 	/**
 	 * @return the palabra
@@ -126,7 +155,7 @@ public class Partida {
 	 */
 	public boolean comprobarPartida() {
 
-		if (this.palabraModificada.isEmpty() || this.intentosFallidos == this.vidas) {
+		if (this.modificadorPalabra.isEmpty() || this.intentosFallidos == this.vidas) {
 
 			setEstadoPartida(false);
 
@@ -225,7 +254,7 @@ public class Partida {
 
 		int i = 0;
 
-		while (i < modificadorPalabra.length()) {
+		while (!this.modificadorPalabra.isEmpty() && i < modificadorPalabra.length()) {
 			
 			if (letra == this.modificadorPalabra.charAt(i)) {
 
