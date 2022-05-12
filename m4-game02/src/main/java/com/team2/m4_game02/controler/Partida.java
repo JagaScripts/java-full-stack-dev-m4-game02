@@ -126,7 +126,7 @@ public class Partida {
 	 */
 	public boolean comprobarPartida() {
 
-		if (this.modificadorPalabra.isEmpty() || this.intentosFallidos == this.vidas) {
+		if (this.palabraModificada.isEmpty() || this.intentosFallidos == this.vidas) {
 
 			setEstadoPartida(false);
 
@@ -225,7 +225,7 @@ public class Partida {
 
 		int i = 0;
 
-		while (!this.modificadorPalabra.isEmpty() && i < modificadorPalabra.length()) {
+		while (i < modificadorPalabra.length()) {
 			
 			if (letra == this.modificadorPalabra.charAt(i)) {
 

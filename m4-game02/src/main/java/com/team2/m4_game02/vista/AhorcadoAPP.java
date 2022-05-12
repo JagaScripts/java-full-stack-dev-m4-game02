@@ -108,6 +108,7 @@ public class AhorcadoAPP extends JFrame {
 				resetBotonesLetras();
 				lblIntentos.setText(partida.getIntentos() + "");
 				lblNewLabel.setIcon(new ImageIcon(AhorcadoAPP.class.getResource("/Imagenes/el-ahorcado-0"+partida.getIntentos()+".jpg")));
+				lblResultado.setIcon(null);
 			}
 
 			
