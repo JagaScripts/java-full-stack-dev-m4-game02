@@ -7,11 +7,12 @@ public class Partida {
 	private PalabrasAleatioras palabraObjeto;
 	private String palabra;
 	private String palabraModificada;
-	private StringBuilder modificadorPalabra ;
+	private StringBuilder modificadorPalabra;
 	private int intentosFallidos;
 	private int pistas;
 	private boolean estadoPartida;
 	private boolean resultadoPartida;
+	private int vidas;
 
 	public Partida() {
 		this.palabraObjeto = new PalabrasAleatioras();
@@ -19,16 +20,28 @@ public class Partida {
 		this.palabraModificada = this.palabra;
 		this.modificadorPalabra = new StringBuilder(this.palabra);
 		this.intentosFallidos = 0;
+		this.vidas = 6;
 		this.pistas = 4;
 		this.estadoPartida = true;
 		this.resultadoPartida = false;
 	}
+	
+	public Partida(int vidas) {
+		this.palabraObjeto = new PalabrasAleatioras();
+		this.palabra = palabraObjeto.GenerarPalabra().toUpperCase();
+		this.palabraModificada = this.palabra;
+		this.modificadorPalabra = new StringBuilder(this.palabra);
+		this.intentosFallidos = 0;
+		this.pistas = 4;
+		this.vidas = vidas;
+		this.estadoPartida = true;
+		this.resultadoPartida = false;
+	}
 
-	public void sumarIntentos() { //Si comprobarLetras es false se resta un intento
+	public void sumarIntentos() { // Si comprobarLetras es false se resta un intento
 		this.intentosFallidos++;
 
 	}
-
 
 	/**
 	 * @return the palabraObjeto
@@ -71,26 +84,25 @@ public class Partida {
 	public void setIntentos(int intentos) {
 		this.intentosFallidos = intentos;
 	}
-	
+
 	/**
 	 * 
 	 * @param letraU
-	 * @return si no se extrae letra se suma un intento y devuelve false sino decuelve true
+	 * @return si no se extrae letra se suma un intento y devuelve false sino
+	 *         decuelve true
 	 */
-	public boolean comprobarletras(char letraU) {//Se le pasa la letra introducida
-		
+	public boolean comprobarletras(char letraU) {// Se le pasa la letra introducida
+
 		if (!extraerLetras(letraU)) {
-			
+
 			this.sumarIntentos();
 			return false;
-			
-		} 
-			
+
+		}
+
 		return true;
-		
+
 	}
-	
-	
 
 	/**
 	 * @return the pistas
@@ -105,20 +117,29 @@ public class Partida {
 	public void setPistas(int pistas) {
 		this.pistas = pistas;
 	}
-	
+
 	/**
-	 * hay partida mientras a la palabra le quedan letras o no ha superado los intentos fallidos 
+	 * hay partida mientras a la palabra le quedan letras o no ha superado los
+	 * intentos fallidos
+	 * 
 	 * @return devuelve el estado de la partida
 	 */
 	public boolean comprobarPartida() {
-		
-		
-		if (palabraModificada.isEmpty() || this.intentosFallidos == 6) {
-			
+
+		if (this.modificadorPalabra.isEmpty() || this.intentosFallidos == this.vidas) {
+
 			setEstadoPartida(false);
-			
+
 		}
-		
+
+		/*
+		 * if (palabraModificada.isEmpty() || this.intentosFallidos == 6) {
+		 * 
+		 * setEstadoPartida(false);
+		 * 
+		 * }
+		 */
+
 		return estadoPartida;
 	}
 
@@ -149,68 +170,75 @@ public class Partida {
 	public void setResultadoPartida(boolean resultadoPartida) {
 		this.resultadoPartida = resultadoPartida;
 	}
-	
+
 	/**
-	 * Comprueba si el jugador ha ganado la partida y cambia el resultado de la partida
+	 * Comprueba si el jugador ha ganado la partida y cambia el resultado de la
+	 * partida
+	 * 
 	 * @return devuelve true si el jugador es ganador y false si ha perdido
 	 */
 	public boolean comprobarGanado() {
-		
+
 		if (palabraModificada.isEmpty()) {
-			
+
 			setResultadoPartida(true);
-			
-		}else if (this.intentosFallidos == 6) {
-			
+
+		} else if (this.intentosFallidos == this.vidas) {
+
 			setResultadoPartida(false);
-			
+
 		}
-		
+
 		return resultadoPartida;
 	}
-	
+
 	/**
 	 * 
 	 * @return devuelve una letra para dar pista
 	 */
 	public char usarPista() {
-		
+
 		char letraPista = 0;
 		pistas--;
-		
-	    Random rand = new Random();
-	    int indiceLetra = rand.nextInt(palabraModificada.length());
-	   
-	    letraPista = palabraModificada.charAt(indiceLetra);
-	    
+
+		Random rand = new Random();
+		int indiceLetra = rand.nextInt(palabraModificada.length());
+
+		letraPista = palabraModificada.charAt(indiceLetra);
+
 		extraerLetras(letraPista);
-		
-	    
-	    return letraPista;
-		
+
+		return letraPista;
+
 	}
-	
+
 	/**
 	 * Este método extrae las coincidencias del caracter pasado pora metro
+	 * 
 	 * @param letra a extraer si existe
-	 * @return false si no ha encontrado ninguna letra y true si ha encontrado alguna
+	 * @return false si no ha encontrado ninguna letra y true si ha encontrado
+	 *         alguna
 	 */
 	private boolean extraerLetras(char letra) {
-		
-		boolean cuentaLetras = false;
-		
-		int i = 0;
-		
-		while (this.palabraModificada.length() > 0 && i < this.palabraModificada.length()) {
 
-			if (letra == this.palabraModificada.charAt(i)) {
+		boolean cuentaLetras = false;
+
+		int i = 0;
+
+		while (!this.modificadorPalabra.isEmpty() && i < modificadorPalabra.length()) {
+			
+			if (letra == this.modificadorPalabra.charAt(i)) {
 
 				modificadorPalabra.deleteCharAt(i);
 				this.palabraModificada = modificadorPalabra.toString();
 				cuentaLetras = true;
+				
+					i--; //Restamos 1 porque se mueve todo el index 1 a la izquierda		
 			}
 			i++;
+
 		}
+
 		return cuentaLetras;
 	}
 
