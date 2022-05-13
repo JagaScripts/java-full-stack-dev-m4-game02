@@ -8,12 +8,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 
 import com.team2.m4_game02.modelo.Partida;
 import com.team2.m4_game02.vista.AhorcadoAPP;
+import com.team2.m4_game02.vista.menus.MenuAchivo;
 import com.team2.m4_game02.vista.paneles.BotonesLetrasPanel;
 import com.team2.m4_game02.vista.paneles.ImagenesPanel;
-import com.team2.m4_game02.vista.paneles.LetrasPanel;
+import com.team2.m4_game02.vista.paneles.LetrasPalabraSecreataPanel;
 import com.team2.m4_game02.vista.paneles.PistasPanel;
 
 /**
@@ -25,34 +27,37 @@ import com.team2.m4_game02.vista.paneles.PistasPanel;
  * 
  * Fecha de creación 12/05/2022
  */
-public class NuevaPartidaControler implements ActionListener{
+public class NuevaPartidaListener implements ActionListener{
 	
-	private LetrasPanel panelLetras;
+	private LetrasPalabraSecreataPanel panelLetras;
 	private Partida partida;
-	private String palabra;
 	private PistasPanel panelPistas;
 	private BotonesLetrasPanel panelBotonesLetras;
 	private ImagenesPanel panelImagnes;
-	
-	
 
 	/**
-	 * 
+	 * @param panelLetras
+	 * @param partida
+	 * @param palabra
+	 * @param panelPistas
+	 * @param panelBotonesLetras
+	 * @param panelImagnes
+	 * @param mnArchivo
 	 */
-	public NuevaPartidaControler() {
+	public NuevaPartidaListener(LetrasPalabraSecreataPanel panelLetras, Partida partida, String palabra, PistasPanel panelPistas,
+			BotonesLetrasPanel panelBotonesLetras, ImagenesPanel panelImagnes) {
 		super();
-		this.partida = new Partida();
-		this.palabra = partida.getPalabra().toUpperCase();
-		this.panelLetras = new LetrasPanel(palabra);
-		
-		
+		this.panelLetras = panelLetras;
+		this.partida = partida;
+		this.panelPistas = panelPistas;
+		this.panelBotonesLetras = panelBotonesLetras;
+		this.panelImagnes = panelImagnes;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		panelLetras.resetLetras();
 		partida = new Partida();
-		palabra = partida.getPalabra().toUpperCase();
 		panelLetras.cargarLetras();
 		panelPistas.resetPistas();
 		panelBotonesLetras.resetBotonesLetras(); 

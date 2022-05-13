@@ -9,13 +9,13 @@ import javax.swing.border.EtchedBorder;
 import java.awt.Color;
 import java.awt.FlowLayout;
 
-public class LetrasPanel extends JPanel {
+public class LetrasPalabraSecreataPanel extends JPanel {
 
 	private String palabra;
 	/**
 	 * Create the panel.
 	 */
-	public LetrasPanel(String palabra) {
+	public LetrasPalabraSecreataPanel(String palabra) {
 		setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Palabra secreta", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		this.palabra = palabra;
@@ -32,7 +32,7 @@ public class LetrasPanel extends JPanel {
 			EtiquetaLetra lblLetra = new EtiquetaLetra(xLetra, 180);
 			lblLetra.setLetra(this.getPalabra().charAt(i));
 			xLetra += 50;
-			this.add(lblLetra);
+			this.add(lblLetra, i);
 		}
 		System.out.println(palabra);
 
@@ -40,12 +40,11 @@ public class LetrasPanel extends JPanel {
 	
 	public void cambiarLetra(char letra) {
 
-		
 		for (int i = 0; i < palabra.length(); i++) {
 
 			if (palabra.charAt(i) == letra) {
 				
-				((EtiquetaLetra) this.getComponent(i)).setText(String.valueOf(letra));;
+				((EtiquetaLetra) this.getComponent(i)).setText(String.valueOf(letra));
 				
 			}
 			
