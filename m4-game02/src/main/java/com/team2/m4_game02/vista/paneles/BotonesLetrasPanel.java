@@ -4,10 +4,11 @@
 package com.team2.m4_game02.vista.paneles;
 
 import java.awt.Component;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
+import com.team2.m4_game02.controlador.BotonLetraListener;
 
 /**
  * m4-game02 - com.team2.m4_game02.vista.paneles - BotonesLetrasPanel
@@ -22,7 +23,7 @@ public class BotonesLetrasPanel extends JPanel{
 
 	private final String[] LETRAS = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 	
-	public BotonesLetrasPanel(ActionListener botonLetraListener) {
+	public BotonesLetrasPanel(BotonLetraListener botonLetraListener) {
 		
 		JButton btnTemporal;
 		int posicionXBotones = 10;

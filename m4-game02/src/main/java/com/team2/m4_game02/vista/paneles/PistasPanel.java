@@ -3,15 +3,11 @@ package com.team2.m4_game02.vista.paneles;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import com.team2.m4_game02.controlador.BotonPistaListener;
-import com.team2.m4_game02.vista.AhorcadoAPP;
+
 
 public class PistasPanel extends JPanel {
 	/**
